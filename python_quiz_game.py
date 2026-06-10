@@ -1,4 +1,4 @@
-import random   #importing random module for giving random questions to user.
+import random   # importing random module for giving random questions to user.
 
 #creating a dictinary with some questions mapped as key, adding their right answers as value.
 questions = {                

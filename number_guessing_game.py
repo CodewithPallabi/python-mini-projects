@@ -1,4 +1,4 @@
-import random                                        #importing random module for generating random numbers.
+import random                                        # importing random module for generating random numbers.
 
 number_to_guess = random.randint(0, 100)             # generates a random number between 0 and 100.
 while True:                                          # creates an infinite loop that runs until the user guesses the correct number.

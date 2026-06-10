@@ -8,7 +8,7 @@ while True:                                                 # creating an infini
         print("Please enter valid numbers..")
 
 opr = input("Enter your operator: ")                # taking input from user as arithmetic operators
-if num1>=num2:                                      # checking which number is bigger using conditions
+if num1>=num2:                                      # checking which number is bigger using if-else conditions
     if opr=="+":
         print(num1+num2)
     if opr=="-":

@@ -6,4 +6,4 @@ if __name__ == '__main__' :
         if x == "p":                                        # exits the program if the user enters 'p'
             break
         command = f'espeak "{x}"'
-        os.system(command)                                  # executes the command and speaks the text aloud
+        os.system(command)                                  # executes the command and speaks the text out loud

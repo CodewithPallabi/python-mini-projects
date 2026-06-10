@@ -2,7 +2,7 @@ Name = input("Enter your name: ")
 print(f"Hello {Name}!\nEnter your birth details bellow....")
 # Get and validate user's birth date
 while True:
-    try:                                                      # handelling error.
+    try:                                                      # handelling error
         birth_date = int(input("Enter your birth date: "))
         if birth_date < 1 or birth_date > 31:
             print("Invalid birth date!")
@@ -12,7 +12,7 @@ while True:
         print("Please enter a numeric value...")
 # Get and validate user's birth month
 while True:
-    try:                                                      # handelling error.
+    try:                                                      # handelling error
         birth_month = int(input("Enter your birth month: "))
         if birth_month < 1 or birth_month > 12:
             print("Invalid birth month!")
@@ -22,7 +22,7 @@ while True:
         print("Please enter a numeric value...")
 # Get and validate user's birth year
 while True:
-    try:                                                     # handelling error.
+    try:                                                     # handelling error
         birth_year = int(input("Enter your birth year: "))
         break
     except ValueError:
