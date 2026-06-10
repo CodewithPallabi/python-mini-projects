@@ -1,7 +1,7 @@
-import random
+import random   #importing random module for giving random questions to user.
 
-
-questions = {
+#creating a dictinary with some questions mapped as key, adding their right answers as value.
+questions = {                
     "What keyword defines a function?": "def",
     "What keyword returns a value from a function?": "return",
     "What keyword creates an anonymous function?": "lambda",
@@ -107,22 +107,22 @@ questions = {
 }
 
 
-def python_quiz_game() :
+def python_quiz_game() :                 #defining a function named as python_quiz_game, that we can call anytime, which give users random questions.
     questions_list = list(questions.keys())
-    total_questions = 10
-    score = 0
+    total_questions = 10                 #It is intilized to 10, means in this game the user will be asked 10 different question.
+    score = 0                            #score is initialized to 0. Whenever any user will give right answer, 1 marks will be added.
     selected_questions = random.sample(questions, total_questions)
 
-    for question in selected_questions:
+    for question in selected_questions:  #using a for loof for iterating over the dictinary.
         print(questions)
-        user_input = input("Your Answers: ").lower().strip()
-        correct_answers = questions[questions]
-        if correct_answers == user_input.lower():
+        user_input = input("Your Answers: ").lower().strip()  #taking answers from users, and automatically converting it into lowercase as in the dict all values are in lowercase.
+        correct_answers = questions[questions]                #It's giving the correct answer as key[value] format.
+        if correct_answers == user_input.lower():             #Using a condition to check whether the answer given by the user is correct or not.
             print("Correct answer!!\n")
-            score +=1
+            score +=1                                         #adding 1 whenever user gives a right answer. So basically it's counting the total number of questions where user gave right anwers.
         else:
             print(f"Wrong answer!!\nThe correct answer is {correct_answers}.\n")
     print(f"Game over!!Your total score is: {score}")   
 
-python_quiz_game()   
+python_quiz_game()                                            #Calling the function.
 
