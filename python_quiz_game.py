@@ -108,15 +108,15 @@ questions = {
 
 
 def python_quiz_game() :                 #defining a function named as python_quiz_game, that we can call anytime, which give users random questions.
-    questions_list = list(questions.keys())
+    questions_list = list(questions.keys()) #make list of question
     total_questions = 10                 #It is intilized to 10, means in this game the user will be asked 10 different question.
     score = 0                            #score is initialized to 0. Whenever any user will give right answer, 1 marks will be added.
-    selected_questions = random.sample(questions, total_questions)
+selected_questions = random.sample(questions_list, total_questions) #pick random questiom
 
     for question in selected_questions:  #using a for loof for iterating over the dictinary.
-        print(questions)
+        print(question) # show one question
         user_input = input("Your Answers: ").lower().strip()  #taking answers from users, and automatically converting it into lowercase as in the dict all values are in lowercase.
-        correct_answers = questions[questions]                #It's giving the correct answer as key[value] format.
+        correct_answers = questions[question]                #It's giving the correct answer as key[value] format.
         if correct_answers == user_input.lower():             #Using a condition to check whether the answer given by the user is correct or not.
             print("Correct answer!!\n")
             score +=1                                         #adding 1 whenever user gives a right answer. So basically it's counting the total number of questions where user gave right anwers.
