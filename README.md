@@ -8,6 +8,7 @@ A collection of my Python learning projects.
 - Age Calculator
 - Voice Agent
 - Number guessing game
+- Python quiz game
 
 
 ## Author
