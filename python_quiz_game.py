@@ -111,18 +111,19 @@ def python_quiz_game() :                 #defining a function named as python_qu
     questions_list = list(questions.keys()) #make list of question
     total_questions = 10                 #It is intilized to 10, means in this game the user will be asked 10 different question.
     score = 0                            #score is initialized to 0. Whenever any user will give right answer, 1 marks will be added.
-selected_questions = random.sample(questions_list, total_questions) #pick random questiom
+    # Ensure we don't try to sample more questions than exist
+    total_questions = min(total_questions, len(questions_list))
+    selected_questions = random.sample(questions_list, total_questions) #pick random question
 
     for question in selected_questions:  #using a for loof for iterating over the dictinary.
         print(question) # show one question
-        user_input = input("Your Answers: ").lower().strip()  #taking answers from users, and automatically converting it into lowercase as in the dict all values are in lowercase.
-        correct_answers = questions[question]                #It's giving the correct answer as key[value] format.
-        if correct_answers == user_input.lower():             #Using a condition to check whether the answer given by the user is correct or not.
+        user_input = input("Your Answer: ").lower().strip()  #taking answers from users, and automatically converting it into lowercase as in the dict all values are in lowercase.
+        correct_answers = str(questions[question]).lower()                #get the correct answer for the current question
+        if correct_answers == user_input:             #Using a condition to check whether the answer given by the user is correct or not.
             print("Correct answer!!\n")
             score +=1                                         #adding 1 whenever user gives a right answer. So basically it's counting the total number of questions where user gave right anwers.
         else:
-            print(f"Wrong answer!!\nThe correct answer is {correct_answers}.\n")
+            print(f"Wrong answer!!\nThe correct answer is {questions[question]}.\n")
     print(f"Game over!!Your total score is: {score}")   
 
 python_quiz_game()                                            #Calling the function.
-
