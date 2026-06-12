@@ -9,6 +9,7 @@ A collection of my Python learning projects.
 - Voice Agent
 - Number guessing game
 - Python quiz game
+- Password Generator
 
 
 ## Author
