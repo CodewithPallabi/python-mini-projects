@@ -10,7 +10,7 @@ A collection of my Python learning projects.
 - Number guessing game
 - Python quiz game
 - Password Generator
-
+- Rock Paper Scissor Game
 
 ## Author
 
