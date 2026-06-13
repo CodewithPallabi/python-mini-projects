@@ -6,25 +6,24 @@ import random
 import string
 
 def password_generator():             #defining a function called password_generator
-    while True:                       #creating a loop for user so that they cannot give any wrong value
-        try:                          #used error handeling to get the right value
+    while True:
+        try:                          # using exceptional handelling, so that user does not give wrong values
             length = int(input("Enter the password length: ").strip())
+
+            if length < 5:               # codition used for getting password length greater than 5
+                print("Password length must be at least 5 characters.")
+                continue
+
             break
+
         except ValueError:
             print("Enter a valid number...")
-
-    
-    # if length < 5:                      #using a condition so that the password length given by the user must be greater than 5
-    #     print("password length must be contain atleast 5 charaters.")
-    #     return                          #i don't know what kind of mistake i'm doing here cause this i not getting executed, no matter what :(
-
-
+  
     # Getting user's preferences   
     include_uppercase = input("Do you wanna include uppercase letters? (y/n): ").lower().strip()  
     include_lowercase = input("Do you wanna include lowercase letters? (y/n): ").lower().strip()
     include_digits = input("Do you wanna include digits? (y/n): ").lower().strip()
     include_special = input("Do you wanna include special characters? (y/n): ").lower().strip()
-
 
 # Here python is using it's random module to give accurate passwors using user's preffered characters
     lower = string.ascii_lowercase
@@ -53,6 +52,6 @@ def password_generator():             #defining a function called password_gener
     random.shuffle(password)                                # as the function is putting all the nessesary characters 1st and then adding random characters on it's choice, there should be no biased password, that's why it's using suffle
 
     str_password = "".join(password)                        # This is converting the list of characters to a string
-    
+    return str_password
 password = password_generator()                             # calling the function.
 print(password)
