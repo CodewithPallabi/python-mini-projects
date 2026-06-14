@@ -10,7 +10,6 @@ class RockPaperscissors():                                 # Main blueprint that
         computer_choice = self.computer_choice()
         print(f"You chose: {user_choice}")
         print(f"Computer chose: {computer_choice}")
-        self.winner(user_choice, computer_choice)
 
     def user_choice(self):                                 # Getting valid input from the user   
         while True:
