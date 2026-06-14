@@ -11,6 +11,7 @@ A collection of my Python learning projects.
 - Python quiz game
 - Password Generator
 - Rock Paper Scissor Game
+- Daily Journal Application
 
 ## Author
 
