@@ -12,7 +12,7 @@ A collection of my Python learning projects.
 - Password Generator
 - Rock Paper Scissor Game
 - Daily Journal Application
-
+- JARVIS: virtual assistant
 ## Author
 
 Pallabi Panja
